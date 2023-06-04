@@ -1,0 +1,108 @@
+.wrapper {
+    position: static;
+    width: 232px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 20px 0 26px;
+    align-items: stretch;
+    min-height: 100%;
+    padding-left: 8px;
+    opacity: inherit;
+    margin-top: 60px;
+    overflow-y: overlay;
+    height: 890px;
+}
+
+.menu-sidebar {
+    margin-bottom: 8px;
+}
+
+.login-sidebar {
+    position: relative;
+    padding: 20px 8px 24px 8px;
+    margin: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        left: 8px;
+        right: 8px;
+        background: rgba(22, 24, 35, 0.12);
+        transform: scaleY(0.5);
+        top: 0;
+    }
+}
+
+.suggest-hosts {
+    position: relative;
+    padding: 16px 0px;
+    margin: 0;
+    width: 232px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        left: 8px;
+        right: 8px;
+        background: rgba(22, 24, 35, 0.12);
+        transform: scaleY(0.5);
+        top: 0;
+    }
+}
+
+.follow-account {
+    position: relative;
+    padding: 16px 0px;
+    margin: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        left: 8px;
+        right: 8px;
+        background: rgba(22, 24, 35, 0.12);
+        -webkit-transform: scaleY(0.5);
+        -moz-transform: scaleY(0.5);
+        -ms-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        top: 0;
+    }
+}
+
+.discover {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px 8px 8px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        left: 8px;
+        right: 8px;
+        background: rgba(22, 24, 35, 0.12);
+        transform: scaleY(0.5);
+        top: 0;
+    }
+}
+.footer {
+    position: relative;
+    padding-top: 16px;
+    padding-left: 8px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        left: 8px;
+        right: 8px;
+        background: rgba(22, 24, 35, 0.12);
+        transform: scaleY(0.5);
+        top: 0;
+    }
+}

@@ -1,0 +1,41 @@
+.wrapper {
+    overflow-x: hidden;
+}
+.title {
+    display: block;
+    color: rgba(22, 24, 35, 0.75);
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 16px;
+}
+
+.discover-item {
+    border-radius: 999px;
+    display: flex;
+    box-sizing: border-box;
+    width: fit-content;
+    height: 24px;
+    margin-bottom: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(22, 24, 35, 0.2);
+    border-radius: 12px;
+    background: rgb(255, 255, 255);
+    transition: background-color 200ms ease-in-out 0s;
+    margin-right: 8px;
+    cursor: pointer;
+    z-index: 1;
+}
+.icon-hashtag {
+    width: 16px;
+    height: 16px;
+}
+.content {
+    white-space: nowrap;
+    color: rgba(22, 24, 35, 0.75);
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 6px;
+}
