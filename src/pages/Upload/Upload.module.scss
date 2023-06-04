@@ -1,155 +1,155 @@
 .Upload {
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
-  background-color: rgb(248, 248, 248);
-  height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    background-color: rgb(248, 248, 248);
+    height: auto;
 }
 
 .container {
-  width: 1100px;
-  margin-top: 16px;
-  margin-bottom: 48px;
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
-  border-radius: 8px;
-  background-color: rgb(255, 255, 255);
+    width: 1100px;
+    margin-top: 16px;
+    margin-bottom: 48px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
 }
 
 .content {
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  cursor: pointer;
-  height: 458px;
-  border: 2px dashed rgba(22, 24, 35, 0.2);
-  box-sizing: border-box;
-  margin: 64px 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    height: 458px;
+    border: 2px dashed rgba(22, 24, 35, 0.2);
+    box-sizing: border-box;
+    margin: 64px 50px;
 }
 .wrapper {
-  position: relative;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-left: 35px;
-  padding-right: 35px;
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 .input-file {
-  position: absolute;
-  width: 990px;
-  height: 450px;
-  background-color: transparent;
-  cursor: pointer;
-  opacity: 0;
+    position: absolute;
+    width: 990px;
+    height: 450px;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 0;
 }
-.Header {
-  text-align: center;
-  margin-top: 24px;
-  font-size: 18px;
-  line-height: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 6px;
+.header {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 6px;
 }
 
 .choose {
-  line-height: 2.5rem;
-  margin-bottom: 4px;
+    line-height: 2.5rem;
+    margin-bottom: 4px;
 }
 
 .des {
-  margin-top: 4px;
-  margin-bottom: 24px;
-  margin-block: 0px;
+    margin-top: 4px;
+    margin-bottom: 24px;
+    margin-block: 0px;
 }
 
 .condition {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  font-size: 1.6rem;
-  margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
 
-  p {
-    margin-bottom: 2px;
-  }
+    p {
+        margin-bottom: 2px;
+    }
 }
 
 .choose-file {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.7rem;
-  font-weight: 600;
-  height: 36px;
-  width: 400px;
-  color: var(--white);
-  background-color: #ff2859;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    height: 36px;
+    width: 400px;
+    color: var(--white);
+    background-color: #ff2859;
 
-  &:hover {
-    background-color: #ff164c;
-  }
+    &:hover {
+        background-color: #ff164c;
+    }
 }
 
 // footer
 
 .footer {
-  width: 100%;
-  color: #fff;
-  background: #000;
-  padding-bottom: 24px;
+    width: 100%;
+    color: #fff;
+    background: #000;
+    padding-bottom: 24px;
 }
 
 .footer-content {
-  position: relative;
-  display: flex;
-  padding: 40px 0 0 378px;
+    position: relative;
+    display: flex;
+    padding: 40px 0 0 378px;
 }
 
 .logo {
-  display: flex;
-  position: absolute;
-  left: 70px;
-  top: 19px;
+    display: flex;
+    position: absolute;
+    left: 70px;
+    top: 19px;
 }
 
 .footer-content-column {
-  flex: 1 1 0%;
-  max-width: 226px;
-  padding-right: 8px;
-  color: #fff;
+    flex: 1 1 0%;
+    max-width: 226px;
+    padding-right: 8px;
+    color: #fff;
 }
 
 .footer-header {
-  font-size: 14px;
-  line-height: 28px;
-  font-weight: 700;
-  color: #fff;
-  margin: 0;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
 }
 
 .footer-item {
-  font-size: 1.4rem;
-  display: block;
-  text-align: left;
-  color: #ccc !important;
-  line-height: 28px;
+    font-size: 1.4rem;
+    display: block;
+    text-align: left;
+    color: #ccc !important;
+    line-height: 28px;
 
-  &:hover {
-    text-decoration: underline;
-  }
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .footer-bottom {
-  display: flex;
-  justify-content: end;
-  padding-right: 114px;
-  margin-top: 60px;
+    display: flex;
+    justify-content: end;
+    padding-right: 114px;
+    margin-top: 60px;
 
-  p {
-    font-size: 1.4rem;
-  }
+    p {
+        font-size: 1.4rem;
+    }
 }

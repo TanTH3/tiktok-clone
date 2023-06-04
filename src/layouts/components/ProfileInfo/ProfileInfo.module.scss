@@ -1,135 +1,139 @@
 .header-info {
-  display: flex;
-  position: relative;
-  flex: 0 0 auto;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  max-width: 624px;
-  padding-right: 92px;
+    display: flex;
+    position: relative;
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    max-width: 624px;
+    padding-right: 92px;
 }
 
 .avatar {
-  display: flex;
-  flex-direction: row;
-  -webkit-box-align: center;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
 }
 
 .user-avatar {
-  width: 116px;
-  height: 116px;
-  border-radius: 50%;
-  object-fit: cover;
-  cursor: pointer;
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
 }
 
 .info-container {
-  flex: 1 1 0%;
-  cursor: pointer;
-  overflow: visible;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  margin-left: 20px;
+    flex: 1 1 0%;
+    cursor: pointer;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
 }
 
 .user-name {
-  font-family: SofiaPro, Arial, Tahoma, PingFangSC, sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 38px;
-  margin-bottom: 4px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: left;
-  word-break: break-word;
+    font-family: SofiaPro, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    word-break: break-word;
+}
+.check {
+    margin-left: 4px;
+    margin-bottom: 4px;
+    font-size: 1.2rem;
 }
 
 .real-name {
-  font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 25px;
-  text-overflow: ellipsis;
-  height: 25px;
-  overflow: hidden;
-  max-width: 450px;
-  white-space: nowrap;
-  display: flex;
-  align-items: flex-end;
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-overflow: ellipsis;
+    height: 25px;
+    overflow: hidden;
+    max-width: 450px;
+    white-space: nowrap;
+    display: flex;
+    align-items: flex-end;
 }
 .edit-btn {
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 4px;
-  color: rgb(22, 24, 35);
-  border-color: rgba(22, 24, 35, 0.12);
-  background-color: rgb(255, 255, 255);
-  min-height: 36px;
-  font-weight: 600;
-  font-family: SofiaPro, PingFangSC, sans-serif;
-  position: relative;
-  -webkit-box-pack: center;
-  justify-content: center;
-  user-select: none;
-  cursor: pointer;
-  box-sizing: border-box;
-  height: 36px;
-  font-size: 16px;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  padding: 0px 16px;
-  line-height: 24px;
-  width: 160px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    color: rgb(22, 24, 35);
+    border-color: rgba(22, 24, 35, 0.12);
+    background-color: rgb(255, 255, 255);
+    min-height: 36px;
+    font-weight: 600;
+    font-family: SofiaPro, PingFangSC, sans-serif;
+    position: relative;
+    -webkit-box-pack: center;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 36px;
+    font-size: 16px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px 16px;
+    line-height: 24px;
+    width: 160px;
 }
 .edit-icon {
-  width: 20px;
-  height: 20px;
-  color: rgb(22, 24, 35);
-  margin-right: 6px;
+    width: 20px;
+    height: 20px;
+    color: rgb(22, 24, 35);
+    margin-right: 6px;
 }
 .interact {
-  margin-top: 22px;
+    margin-top: 22px;
 }
 
 .info-interact {
-  line-height: 25px;
-  display: flex;
-  direction: ltr;
-  -webkit-box-align: baseline;
-  align-items: baseline;
+    line-height: 25px;
+    display: flex;
+    direction: ltr;
+    -webkit-box-align: baseline;
+    align-items: baseline;
 }
 
 .number-follower {
-  color: rgb(22, 24, 35);
-  font-family: SofiaPro, Arial, Tahoma, PingFangSC, sans-serif;
-  font-weight: 600;
-  font-size: 18px;
+    color: rgb(22, 24, 35);
+    font-family: SofiaPro, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .follower {
-  color: rgba(22, 24, 35, 0.75);
-  font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  display: inline-block;
-  margin-left: 6px;
+    color: rgba(22, 24, 35, 0.75);
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    display: inline-block;
+    margin-left: 6px;
 }
 
 .follower + .number-follower {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 .bio {
-  text-align: left;
-  color: rgb(22, 24, 35);
-  font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  white-space: pre-line;
-  margin-top: 10px;
+    text-align: left;
+    color: rgb(22, 24, 35);
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    white-space: pre-line;
+    margin-top: 10px;
 }

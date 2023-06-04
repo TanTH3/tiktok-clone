@@ -83,6 +83,7 @@ function Content({ data }) {
         setVisible((prev) => !prev);
         console.log(123, visible);
     };
+
     return (
         <div className={cx('container')}>
             <Image
