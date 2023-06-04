@@ -64,6 +64,7 @@
         font-size: 16px;
         line-height: 22px;
         font-weight: 600;
+        margin-left: 2px;
 
         &:hover {
             text-decoration: underline;
@@ -148,6 +149,16 @@
     height: 40px;
     cursor: pointer;
     display: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: transparent;
+        height: 17px;
+        width: 20px;
+        bottom: 29px;
+        right: 9px;
+    }
 }
 
 .report {

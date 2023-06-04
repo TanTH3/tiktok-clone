@@ -24,7 +24,7 @@ import { ThemeContext } from '~/layouts/ThemeContext';
 
 const cx = classNames.bind(styles);
 
-function Content() {
+function Content({ data }) {
     const inputRef = useRef();
     const videoRef = useRef();
     const context = useContext(ThemeContext);
@@ -86,45 +86,46 @@ function Content() {
     return (
         <div className={cx('container')}>
             <Image
-                src="signature=SYVhIq8ZgXOiv%2F5UHX5xt13X%2Fmk%3D"
+                src={data.avatar}
                 className={cx('avatar')}
-                alt="123"
+                alt={data.last_name}
                 fallback="https://haycafe.vn/wp-content/uploads/2022/02/Anh-gai-xinh-Viet-Nam.jpg"
             />
             <div className={cx('content')}>
                 <div className={cx('info')}>
                     <div>
-                        <span className={cx('user-name')}>pusheen</span>
-                        <span className={cx('check')}>
-                            <TickBlueIcon />
+                        <span className={cx('user-name')}>{data.nickname}</span>
+                        {data.tick && (
+                            <span className={cx('check')}>
+                                <TickBlueIcon />
+                            </span>
+                        )}
+                        <span className={cx('real-name')}>
+                            {data.full_name}
                         </span>
-                        <span className={cx('real-name')}>pusheen</span>
                     </div>
                     <div className={cx('hashtag')}>
-                        <Link className={cx('item')} to="/">
-                            #Pusheen
-                        </Link>
-                        <Link className={cx('item')} to="/">
-                            #pusheenthecat
-                        </Link>
-                        <Link className={cx('item')} to="/">
-                            #toebeans🐾
-                        </Link>
-                        <Link className={cx('item')} to="/">
-                            #fyp
-                        </Link>
+                        {data.hastags.map((hastag, i) => (
+                            <Link className={cx('item')} to="/" key={i}>
+                                {hastag}
+                            </Link>
+                        ))}
                     </div>
                     <div className={cx('music')}>
                         <MusicIcon />
                         <Link className={cx('item')} to="/">
-                            original sound - Pusheen
+                            {data.music}
                         </Link>
                     </div>
                 </div>
 
                 <div className={cx('show')}>
-                    <div className={cx('video')} onMouseOut={console.log(123)}>
-                        <Video currentVolume={currentVolume} ref={videoRef} />
+                    <div className={cx('video')}>
+                        <Video
+                            currentVolume={currentVolume}
+                            ref={videoRef}
+                            src={data.src}
+                        />
                         <div className={cx('btn')}>
                             <>
                                 {isPlaying ? (
@@ -165,6 +166,9 @@ function Content() {
                                 )}
                                 {!hideCurrentVolume && (
                                     <input
+                                        onMouseEnter={() =>
+                                            setHideCurrentVolume(false)
+                                        }
                                         className={cx('seek-volume')}
                                         onChange={handleVolumeChange}
                                         ref={inputRef}
@@ -201,7 +205,9 @@ function Content() {
                                             )}
                                         </span>
                                     </button>
-                                    <span className={cx('count')}>5.7M</span>
+                                    <span className={cx('count')}>
+                                        {data.like}
+                                    </span>
                                 </>
                                 <>
                                     <button className={cx('interact-btn')}>
@@ -209,7 +215,9 @@ function Content() {
                                             <CommentIcon />
                                         </span>
                                     </button>
-                                    <span className={cx('count')}>33k</span>
+                                    <span className={cx('count')}>
+                                        {data.comment}
+                                    </span>
                                 </>
                                 <>
                                     <button className={cx('interact-btn')}>
@@ -217,7 +225,9 @@ function Content() {
                                             <ShareIcon />
                                         </span>
                                     </button>
-                                    <span className={cx('count')}>568</span>
+                                    <span className={cx('count')}>
+                                        {data.share}
+                                    </span>
                                 </>
                             </>
                         ) : (
@@ -235,7 +245,9 @@ function Content() {
                                             )}
                                         </span>
                                     </button>
-                                    <span className={cx('count')}>5.7M</span>
+                                    <span className={cx('count')}>
+                                        {data.like}
+                                    </span>
                                 </>
                                 <>
                                     <button
@@ -246,7 +258,9 @@ function Content() {
                                             <CommentIcon />
                                         </span>
                                     </button>
-                                    <span className={cx('count')}>33k</span>
+                                    <span className={cx('count')}>
+                                        {data.comment}
+                                    </span>
                                 </>
                                 <>
                                     <button
@@ -257,7 +271,9 @@ function Content() {
                                             <ShareIcon />
                                         </span>
                                     </button>
-                                    <span className={cx('count')}>568</span>
+                                    <span className={cx('count')}>
+                                        {data.share}
+                                    </span>
                                 </>
                             </>
                         )}

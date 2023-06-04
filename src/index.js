@@ -7,14 +7,13 @@ import { ThemeProvider } from './layouts/ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <GlobalStyle>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </GlobalStyle>
-    ,
-  </React.StrictMode>,
+    <React.StrictMode>
+        <GlobalStyle>
+            <ThemeProvider>
+                <App />
+            </ThemeProvider>
+        </GlobalStyle>
+    </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
