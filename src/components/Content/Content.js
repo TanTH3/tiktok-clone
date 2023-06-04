@@ -34,6 +34,7 @@ function Content() {
     const [isLiked, setIsLiked] = useState(false);
     const [isFollowed, setIsFollowed] = useState(false);
     const [visible, setVisible] = useState(false);
+    const [hideCurrentVolume, setHideCurrentVolume] = useState(true);
 
     const handlePlay = () => {
         videoRef.current.play();
@@ -57,7 +58,8 @@ function Content() {
     const handleUnmute = () => {
         setIsMute((prev) => !prev);
         setCurrentVolume(() => {
-            const storageIndex = JSON.parse(localStorage.getItem('jsonIndex')) || 1;
+            const storageIndex =
+                JSON.parse(localStorage.getItem('jsonIndex')) || 1;
             console.log(storageIndex);
             return storageIndex;
         });
@@ -126,37 +128,54 @@ function Content() {
                         <div className={cx('btn')}>
                             <>
                                 {isPlaying ? (
-                                    <button className={cx('pause')} onClick={handlePause}>
+                                    <button
+                                        className={cx('pause')}
+                                        onClick={handlePause}
+                                    >
                                         <PauseIcon />
                                     </button>
                                 ) : (
-                                    <button className={cx('play')} onClick={handlePlay}>
+                                    <button
+                                        className={cx('play')}
+                                        onClick={handlePlay}
+                                    >
                                         <PlayIcon />
                                     </button>
                                 )}
                             </>
-                            <div className={cx('volume')}>
+                            <div
+                                className={cx('volume')}
+                                onMouseEnter={() => setHideCurrentVolume(false)}
+                                onMouseLeave={() => setHideCurrentVolume(true)}
+                            >
                                 {!isMute ? (
-                                    <button className={cx('on-off-volume')} onClick={handleMute}>
+                                    <button
+                                        className={cx('on-off-volume')}
+                                        onClick={handleMute}
+                                    >
                                         <VolumeOnIcon />
                                     </button>
                                 ) : (
-                                    <button className={cx('on-off-volume')} onClick={handleUnmute}>
+                                    <button
+                                        className={cx('on-off-volume')}
+                                        onClick={handleUnmute}
+                                    >
                                         <VolumeOffIcon />
                                     </button>
                                 )}
-
-                                <input
-                                    className={cx('seek-volume')}
-                                    onChange={handleVolumeChange}
-                                    ref={inputRef}
-                                    type="range"
-                                    name="volume"
-                                    step="0.01"
-                                    min="0"
-                                    max="100"
-                                    value={currentVolume * 100}
-                                />
+                                {!hideCurrentVolume && (
+                                    <input
+                                        className={cx('seek-volume')}
+                                        onChange={handleVolumeChange}
+                                        ref={inputRef}
+                                        type="range"
+                                        name="volume"
+                                        step="0.01"
+                                        min="0"
+                                        max="100"
+                                        value={currentVolume * 100}
+                                    />
+                                )}
                             </div>
                             <button className={cx('report')}>
                                 <FlagIcon className={cx('flag')} />
@@ -168,9 +187,18 @@ function Content() {
                         {context.isLogIn ? (
                             <>
                                 <>
-                                    <button className={cx('interact-btn')} onClick={() => setIsLiked((prev) => !prev)}>
+                                    <button
+                                        className={cx('interact-btn')}
+                                        onClick={() =>
+                                            setIsLiked((prev) => !prev)
+                                        }
+                                    >
                                         <span className={cx('Wrapper-btn')}>
-                                            {isLiked ? <HeartLikedIcon /> : <HeartIcon />}
+                                            {isLiked ? (
+                                                <HeartLikedIcon />
+                                            ) : (
+                                                <HeartIcon />
+                                            )}
                                         </span>
                                     </button>
                                     <span className={cx('count')}>5.7M</span>
@@ -195,15 +223,25 @@ function Content() {
                         ) : (
                             <>
                                 <>
-                                    <button className={cx('interact-btn')} onClick={handleSetModal}>
+                                    <button
+                                        className={cx('interact-btn')}
+                                        onClick={handleSetModal}
+                                    >
                                         <span className={cx('Wrapper-btn')}>
-                                            {isLiked ? <HeartLikedIcon /> : <HeartIcon />}
+                                            {isLiked ? (
+                                                <HeartLikedIcon />
+                                            ) : (
+                                                <HeartIcon />
+                                            )}
                                         </span>
                                     </button>
                                     <span className={cx('count')}>5.7M</span>
                                 </>
                                 <>
-                                    <button className={cx('interact-btn')} onClick={handleSetModal}>
+                                    <button
+                                        className={cx('interact-btn')}
+                                        onClick={handleSetModal}
+                                    >
                                         <span className={cx('Wrapper-btn')}>
                                             <CommentIcon />
                                         </span>
@@ -211,7 +249,10 @@ function Content() {
                                     <span className={cx('count')}>33k</span>
                                 </>
                                 <>
-                                    <button className={cx('interact-btn')} onClick={handleSetModal}>
+                                    <button
+                                        className={cx('interact-btn')}
+                                        onClick={handleSetModal}
+                                    >
                                         <span className={cx('Wrapper-btn')}>
                                             <ShareIcon />
                                         </span>

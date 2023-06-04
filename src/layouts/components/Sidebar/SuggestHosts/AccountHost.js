@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react/headless';
@@ -8,12 +8,9 @@ import Image from '~/components/Image';
 import { TickBlueIcon } from '~/components/Icons';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountPreview from './AccountPreview';
-import Portal from '~/components/Portal';
 
 const cx = classNames.bind(styles);
 function AccountHost({ data, onClick }) {
-    const [visible, setVisible] = useState(true);
-
     const likRef = useRef();
 
     const renderPreview = (attrs) => {

@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Sidebar.module.scss';
 import {
@@ -19,7 +19,6 @@ import SuggestHosts from './SuggestHosts';
 import Discover from './Discover';
 import FollowAccount from './FollowAccount';
 import Footer from './SideBarFoot';
-import Portal from '~/components/Portal';
 
 import config from '~/config';
 
@@ -61,8 +60,6 @@ const MENU_SIDEBAR = [
 ];
 
 function Sidebar() {
-    const [visible, setVisible] = useState(true);
-
     const context = useContext(ThemeContext);
 
     return (

@@ -1,101 +1,100 @@
 @import 'normalize.css';
 
 :root {
-  --primary-color: #fe2c55;
-  --black: #000;
-  --white: #fff;
-  --text-color: #161823;
-  --ProximaNova-font: 'ProximaNova', sans-serif;
+    --primary-color: #fe2c55;
+    --black: #000;
+    --white: #fff;
+    --text-color: #161823;
+    --ProximaNova-font: 'ProximaNova', sans-serif;
 
-  //Default layout
-  --default-layout-header-height: 60px;
-  --default-layout-width: 100%;
-  --default-layout-horizontal-spacer: 24px;
+    //Default layout
+    --default-layout-header-height: 60px;
+    --default-layout-width: 100%;
+    --default-layout-horizontal-spacer: 24px;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 body {
-  font-family: var(--ProximaNova-font);
-  font-size: 1.6rem;
-  line-height: 1.5rem;
-  text-rendering: optimizeSpeed;
-  margin: 0;
-  overflow-y: overlay;
+    font-family: var(--ProximaNova-font);
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    text-rendering: optimizeSpeed;
+    margin: 0;
 }
 // scroll bar
 
 html *::-webkit-scrollbar {
-  border-radius: 0;
-  width: 8px;
+    border-radius: 0;
+    width: 8px;
 }
 html *::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(22, 24, 35, 0.06);
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
 }
 html *::-webkit-scrollbar-track {
-  border-radius: 0;
-  background-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
 }
 button,
 input,
 select,
 [tabindex] {
-  outline: none;
-  border: none;
-  background-color: transparent;
+    outline: none;
+    border: none;
+    background-color: transparent;
 }
 
 a[href] {
-  color: var(--text-color);
-  text-decoration: none;
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 //font
 
 @font-face {
-  font-family: ProximaNova;
-  src: url('/assets/font/Proxima-Nova-Bold.woff2');
-  font-weight: 700;
+    font-family: ProximaNova;
+    src: url('/assets/font/Proxima-Nova-Bold.woff2');
+    font-weight: 700;
 }
 @font-face {
-  font-family: ProximaNova;
-  src: url('/assets/font/Proxima-Nova-Semibold.woff2');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: ProximaNova;
-  src: url('/assets/font/Proxima-Nova-Regular.woff2');
-  font-weight: 400;
+    font-family: ProximaNova;
+    src: url('/assets/font/Proxima-Nova-Semibold.woff2');
+    font-weight: 600;
 }
 
 @font-face {
-  font-family: SofiaPro;
-  src: url('/assets/font/sofiapro-bold.woff2');
-  font-weight: 700;
+    font-family: ProximaNova;
+    src: url('/assets/font/Proxima-Nova-Regular.woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: SofiaPro;
+    src: url('/assets/font/sofiapro-bold.woff2');
+    font-weight: 700;
 }
 // tippy
 body {
-  .tippy-box {
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 22px;
-    background-color: rgba(84, 84, 84, 0.92);
-    color: var(--white);
-    border-radius: 8px;
+    .tippy-box {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 22px;
+        background-color: rgba(84, 84, 84, 0.92);
+        color: var(--white);
+        border-radius: 8px;
 
-    .tippy-arrow {
-      top: -1px;
-      color: rgba(0, 0, 0, 0.65);
+        .tippy-arrow {
+            top: -1px;
+            color: rgba(0, 0, 0, 0.65);
+        }
+        .tippy-box[data-placement^='bottom'] > .tippy-arrow::before {
+            top: -8px;
+        }
     }
-    .tippy-box[data-placement^='bottom'] > .tippy-arrow::before {
-      top: -8px;
-    }
-  }
 }

@@ -39,7 +39,7 @@ function AccountPreview({ data }) {
                         Follow
                     </Button>
                 ) : (
-                    <Button outline small onClick={handleSetModal}>
+                    <Button primary small onClick={handleSetModal}>
                         Follow
                     </Button>
                 )}
@@ -47,7 +47,11 @@ function AccountPreview({ data }) {
                     <Modal OnInCrease={handleSetModal} />
                 </Portal>
             </div>
-            <Link to={`/@${data.nickname}`} className={cx('name')} state={{ data: data.nickname }}>
+            <Link
+                to={`/@${data.nickname}`}
+                className={cx('name')}
+                state={{ data: data.nickname }}
+            >
                 <span className={cx('user-name')}>{data.nickname}</span>
                 {data.tick && (
                     <span className={cx('check')}>

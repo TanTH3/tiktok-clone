@@ -6,19 +6,18 @@
 }
 
 .container {
-    width: calc(100% - 232px);
+    width: 100%;
     max-width: 100%;
     display: flex;
     margin-top: var(--default-layout-header-height);
-    flex-direction: row-reverse;
-    margin-left: 232px;
-    position: absolute;
-    top: -950px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .side-bar {
     height: 890px;
     overflow-y: overlay;
+    overflow-x: hidden;
 }
 
 .content {
